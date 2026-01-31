@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Study Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="logo">Study Tracker</div>
+      <nav>
+        <button id="logout-btn" class="ghost">Logout</button>
+      </nav>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel timer-panel">
+        <h2>Study Planner</h2>
+        <form id="task-form" class="form-grid">
+          <input name="subject" placeholder="Subject" required />
+          <input name="topic" placeholder="Topic" required />
+          <input name="deadline" type="date" />
+          <select name="priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button class="primary" type="submit">Add Task</button>
+        </form>
+        <div id="task-list" class="task-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Pomodoro Timer</h2>
+        <div class="timer">
+          <div id="timer-display" class="timer-display">25:00</div>
+          <div class="timer-controls">
+            <button id="timer-start" class="primary">Start</button>
+            <button id="timer-pause" class="ghost">Pause</button>
+            <button id="timer-reset" class="ghost">Reset</button>
+          </div>
+          <div class="timer-meta">
+            <input id="timer-subject" placeholder="Subject for this session" />
+            <select id="timer-mode">
+              <option value="25">25 min focus</option>
+              <option value="50">50 min focus</option>
+              <option value="10">10 min break</option>
+            </select>
+          </div>
+        </div>
+        <div class="timer-watch" aria-hidden="true">
+          <div class="timer-watch-face">
+            <span class="watch-number n12">12</span>
+            <span class="watch-number n3">3</span>
+            <span class="watch-number n6">6</span>
+            <span class="watch-number n9">9</span>
+            <div class="watch-hand hour" id="watch-hour"></div>
+            <div class="watch-hand minute" id="watch-minute"></div>
+            <div class="watch-hand second" id="watch-second"></div>
+            <div class="watch-center"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Notes</h2>
+        <form id="note-form" class="form-grid">
+          <input name="subject" placeholder="Subject" required />
+          <textarea name="content" placeholder="Write a short note" rows="3" required></textarea>
+          <label class="checkbox">
+            <input type="checkbox" name="isMarkdown" />
+            Use Markdown
+          </label>
+          <button class="primary" type="submit">Save note</button>
+        </form>
+        <div id="notes-list" class="notes-list"></div>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

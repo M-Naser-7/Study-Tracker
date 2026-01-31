@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Study Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="auth-wrapper">
+      <form id="register-form" class="auth-card">
+        <h2>Create account</h2>
+        <p>Start building a smarter study plan today.</p>
+
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Alex" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="you@email.com" />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" required placeholder="••••••••" />
+        </label>
+
+        <button type="submit" class="primary">Create account</button>
+        <p class="auth-switch">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </form>
+    </main>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

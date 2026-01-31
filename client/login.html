@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Study Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="auth-wrapper">
+      <form id="login-form" class="auth-card">
+        <h2>Welcome back</h2>
+        <p>Log in to continue tracking your progress.</p>
+
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="you@email.com" />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" required placeholder="••••••••" />
+        </label>
+
+        <button type="submit" class="primary">Login</button>
+        <p class="auth-switch">
+          New here? <a href="register.html">Create an account</a>
+        </p>
+      </form>
+    </main>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

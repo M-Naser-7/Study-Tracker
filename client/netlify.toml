@@ -1,0 +1,11 @@
+[build]
+command = "echo 'Static site'"
+publish = "."
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[context.production.environment]
+API_BASE = "https://study-tracker-api.onrender.com/api"
